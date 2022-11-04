@@ -1,0 +1,37 @@
+[[AttendanceType-API]]
+= attendanceType-API
+출결 종류를 조회 및 관리할 수 있는 api 입니다.
+
+[[AttendanceType-Get-Single]]
+== GET : /mms/api/v1/attendanceType/{attendanceTypeID}
+=== 단일 AttendanceType을 조회
+=== Route Options
+[cols="1,1"]
+|===
+|authorization
+|false
+
+|Role
+|x
+
+|add user info
+|false
+|===
+operation::attendanceType-get-single[snippets='path-parameters,response-fields,response-body,http-request,http-response,']
+
+[[AttendanceType-Get-Multiple]]
+== GET : /mms/api/v1/attendanceType/
+=== 다수 attendanceType를 조회
+=== Route Options
+[cols="1,1"]
+|===
+|authorization
+|false
+
+|Role
+|x
+
+|add user info
+|false
+|===
+operation::attendanceType-get-multiple[snippets='response-fields,response-body,http-request,http-response,']

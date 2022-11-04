@@ -1,0 +1,71 @@
+[[Attendance-Code-API]]
+= Attendance-Code-API
+출결 코드를 생성 및 취소 하거나, 해당 출결 코드로 새로운 Attendance를 등록할 수 있는 api입니다.
+
+[[Attendance-Code-Create]]
+== POST : /mms/api/v1/attendance-code
+=== attendance-code를 발급
+=== Route Options
+[cols="1,1"]
+|===
+|authorization
+|true
+
+|Role
+|admin
+
+|add user info
+|false
+|===
+operation::attendance-code-create[snippets='request-fields,request-body,response-fields,response-body,http-request,http-response,']
+
+[[Attendance-Code-Revoke]]
+== GET : /mms/api/v1/attendance-code/{targetTimeTableId}
+=== attendance-code를 삭제
+=== Route Options
+[cols="1,1"]
+|===
+|authorization
+|true
+
+|Role
+|admin
+
+|add user info
+|false
+|===
+operation::attendance-code-revoke[snippets='path-parameters,response-fields,response-body,http-request,http-response,']
+
+[[Attendance-Code-Find]]
+== GET : /api/v1/attendance-code/{targetTimeTableId}
+=== 해당 TimeTable에 대한 Attendance-Code를 조회
+=== Route Options
+[cols="1,1"]
+|===
+|authorization
+|true
+
+|Role
+|admin
+
+|add user info
+|false
+|===
+operation::attendance-code-find[snippets='response-fields,response-body,http-request,http-response,']
+
+[[Attendance-Code-Register]]
+== DELETE : /api/v1/attendance-code/register
+=== attendance-code를 사용하여 새로운 attendance를 등록
+=== Route Options
+[cols="1,1"]
+|===
+|authorization
+|true
+
+|Role
+|user0
+
+|add user info
+|true
+|===
+operation::attendance-code-register[snippets='request-fields,request-body,response-fields,response-body,http-request,http-response,']
